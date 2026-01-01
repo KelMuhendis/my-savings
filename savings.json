@@ -1,10 +1,13 @@
 {
-  "USD":                { "amount": 10 },
-  "EUR":                { "amount": 10 },
-  "GBP":                { "amount": 10 },
-  "Has Altın(0,9999)":  { "amount": 10 },
-  "Külçe(0,995)":       { "amount": 10 },
-  "22 Ayar Hurda":      { "amount": 10 },
-  "Çeyrek":             { "amount": 10 },
-  "Banka Altın":        { "amount": 10 }
+  "saving": [
+    { "name":"USD",               "amount": 10 },
+    { "name":"EUR",               "amount": 10 },
+    { "name":"GBP",               "amount": 10 },
+    { "name":"EURUSD",            "amount": 10 },
+    { "name":"Has Altın(0,9999)", "amount": 10 },
+    { "name":"Külçe(0,995)",      "amount": 10 },
+    { "name":"22 Ayar Hurda",     "amount": 10 },
+    { "name":"Çeyrek",            "amount": 10 },
+    { "name":"Banka Altın",       "amount": 10 }
+  ]
 }
