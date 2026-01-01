@@ -1,6 +1,8 @@
+import os
 from datetime import datetime, timedelta
 import time
 import json
+import math
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -8,7 +10,15 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
 def get_data():
-    with open("currencies.json", "r", encoding="utf-8") as f:
+    file_path = "currencies.json"
+    if not os.path.exists(file_path):
+        data = {
+                "timestamp": datetime(2000, 1, 1).isoformat()
+            }
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(data, f)
+
+    with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     timestamp_str = data.get("timestamp")
@@ -69,7 +79,6 @@ def get_data():
 
             scraped_data.append(("Banka Altın", value))
 
-            print(scraped_data)
             data = {
                 "timestamp": datetime.now().isoformat(), 
                 "price": [
@@ -89,25 +98,29 @@ def get_data():
     else:
         return data.get("price") 
 
-def calculate_final_savings(prices, portfolio):
+def calculate_final_savings(currencies, savings):
     def tr_number_to_float(value: str) -> float:
         return float(value.replace('.', '').replace(',', '.'))
 
     price_dict = {
         item["name"]: tr_number_to_float(item["value"])
-        for item in prices
+        for item in currencies
     }
 
     total = 0.0
 
-    for asset, info in portfolio.items():
+    for item in savings.get("saving", []):
+        asset = item["name"]
+        amount = item["amount"]
         if asset in price_dict:
-            total += info["amount"] * price_dict[asset]
+            total += amount * price_dict[asset]
 
     return total
 
 if __name__ == "__main__":
     currencies = get_data()
-    with open("savings.json") as f:
+    with open("savings.json", encoding="utf-8") as f:
         savings = json.load(f)
-    print(calculate_final_savings(currencies, savings))
+    total_savings = math.floor(calculate_final_savings(currencies, savings))
+    money = math.floor(total_savings)
+    print(f"₺{total_savings:,}")
