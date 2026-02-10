@@ -31,20 +31,34 @@ Experience a cleaner, smarter financial life.
 
 ### 1. Your Wealth Center
 The main dashboard gives you the big picture immediately.
-![Dashboard - Total Net Worth](./images/home_screen.png)
 
+<img src="./images/dashboard.png" alt="drawing" width="400"/>
+
+List view is more detailed.
+
+<img src="./images/list_view.png" alt="drawing" width="400"/>
 
 ### 2. Add Assets in Seconds
 A streamlined interface allows you to build your portfolio quickly.
-![Add New Asset](./images/add_asset.png)
+
+<img src="./images/add_new.png" alt="drawing" width="400"/>
 
 ### 3. Quick Updates
 Adjust your balances on the fly as you spend or save.
-![Update Asset](./images/update_asset.png)
+
+<img src="./images/update.png" alt="drawing" width="400"/>
 
 ### 4. Real-Time Market Data
 Track the pulse of the market with live currency and commodity rates.
-![Market Rates](./images/market_rates.png)
+
+<img src="./images/market_data.png" alt="drawing" width="400"/>
+
+### 5. Preferences
+
+* ** Multi-Language Support:** Feel at home. Switch the interface language to your native tongue with a single tap.
+* ** Base Currency Preference:** Whether you think in USD, EUR, or TRY, set your primary currency to see your total wealth calculated in the money that matters to you.
+
+<img src="./images/settings.png" alt="drawing" width="400"/>
 
 ---
 
@@ -63,7 +77,7 @@ Achieving financial organization takes less than a minute:
 
 Take the first step towards better financial management.
 
-[**📱 Download for iOS**](#) &nbsp;&nbsp;|&nbsp;&nbsp; [**🤖 Download for Android**](#)
+[**Download for iOS**](#) &nbsp;&nbsp;
 
 *(Links will be active soon)*
 
@@ -72,4 +86,4 @@ Take the first step towards better financial management.
 ### We Listen to You
 AssetFlow is built for you. If you have a feature request, found a bug, or just want to say hi, reach out to us directly.
 
-* [Submit Feedback or Request Features](https://github.com/username/projectname/issues)
+* [Submit Feedback or Request Features](https://github.com/KelMuhendis/my-savings/issues)
